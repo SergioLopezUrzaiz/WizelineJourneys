@@ -1,1 +1,2 @@
-This project was created with [Create New App](https://github.com/qodesmith/create-new-app).
+npm install react-refresh
+npm install @mui/material @emotion/react @emotion/styled

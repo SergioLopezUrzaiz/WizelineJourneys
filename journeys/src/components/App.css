@@ -13,5 +13,27 @@ header {
 }
 
 body {
-    background-color: #F2F3EF;
+    /* background-color: #F2F3EF; */
+    background-image: linear-gradient(grey, black);
+}
+
+.fullCourse {
+    display: block;
+}
+
+.operatorButton {
+    background-color: transparent;
+    margin: none;
+    border: none;
+}
+
+.operatorSign {
+    width: 50px;
+    cursor: pointer;
+}
+
+.mSign {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 925px;
 }

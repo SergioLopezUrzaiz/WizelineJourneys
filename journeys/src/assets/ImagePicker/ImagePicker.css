@@ -1,0 +1,67 @@
+.imagePickerContainer {
+    border-style: solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.imageInput {
+    display: none;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.textInput {
+    text-align: center;
+}
+
+.resourcesButton {
+    background-color: #b148d2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    height: 30px;
+    width: 150px;
+}
+
+.resourcesButton:hover {
+    background-color: #691883;
+}
+
+.saveButton {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    height: 30px;
+    width: 150px;
+}
+
+.saveButton:hover {
+    background-color: darkgreen;
+}
+
+.editButton {
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    height: 30px;
+    width: 150px;
+}
+
+.editButton:hover {
+    background-color: darkorange;
+}

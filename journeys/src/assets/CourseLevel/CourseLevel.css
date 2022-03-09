@@ -1,0 +1,16 @@
+.courseLevel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.operatorButton {
+    background-color: transparent;
+    margin: none;
+    border: none;
+}
+
+.operatorSign {
+    width: 50px;
+    cursor: pointer;
+}

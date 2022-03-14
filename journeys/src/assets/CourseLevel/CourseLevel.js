@@ -1,42 +1,45 @@
 import React, { Component } from 'react';
 import './CourseLevel.css'
 import ImagePicker from '../ImagePicker/ImagePicker.js'
-import Minus from '../images/minus_sign.png'
-import Plus from '../images/plus_sign.png'
+import Empty from '../images/empty_resource.png'
 
 export default class CourseLevel extends Component {
 
     state = {
-        n: 1
+        index: 0,
+        n: []
     }
 
     render() {
 
         const {n} = this.state
+        const {index} = this.state
 
-        const sub = () => {
-            if(n > 1) {
-                this.setState({n: n - 1})
-            }
+        const sub = (j) => {
+            var temp = [...n];
+            temp.splice(j, 1);
+            this.setState({n: temp});
         }
 
         const add = () => {
-            if(n < 4) {
-                this.setState({n: n + 1})
+            if(n.length < 4) {
+                var temp = n;
+                temp.push(1);
+                this.setState({n: temp})
             }
         }
 
         return (
             <div class="courseLevel">
-                <button name="minus" class="operatorButton" onClick={sub}>
-                    <img src={Minus} class="operatorSign"/>
-                </button>
-                {Array.from({length: n}, (_, j) => 
+                {Array.from({length: n.length}, (_, j) => 
                     <span key={j}>
                     <ImagePicker row={this.props.row} col={j}/>
+                    <button name="delete" class="deleteButton" onClick={() => {sub(j)}}>
+                        Delete
+                    </button>
                     </span>)}
                 <button name="plus" class="operatorButton" onClick={add}>
-                    <img src={Plus} class="operatorSign"/>
+                    <img src={Empty} class={n.length < 4 ? "visibleEmpty" : "hiddenEmpty"} />
                 </button>
             </div>
         )
